@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Assassinato no Expresso Noturno</title>
+</head>
+<body>
+    <main>
+        <!-- Introdução -->
+        <div class="passo ativo" id="passo-0">
+            <img src="cenario-trem.jpg" alt="Interior do trem de luxo">
+            <p>Você está no *Expresso Noturno*, um trem de luxo que atravessa as montanhas em uma viagem noturna. Durante a madrugada, um grito corta o silêncio. Ao investigar, você encontra um passageiro morto na cabine 7.</p>
+            <button class="btn-proximo" data-proximo="1">Investigar a cena do crime</button>
+            <button class="btn-proximo" data-proximo="2">Interrogar os passageiros</button>
+        </div>
+
+        <!-- Cena do crime -->
+        <div class="passo" id="passo-1">
+            <img src="cenario-crime.jpg" alt="Cena do crime na cabine">
+            <p>Na cabine 7, você encontra o corpo de um homem com uma faca cravada no peito. Há pegadas de lama próximas à porta e um relógio quebrado marcando 2:45.</p>
+            <button class="btn-proximo" data-proximo="3">Examinar as pegadas</button>
+            <button class="btn-proximo" data-proximo="4">Investigar o relógio</button>
+        </div>
+
+        <!-- Interrogar passageiros -->
+        <div class="passo" id="passo-2">
+            <img src="cenario-corredor.jpg" alt="Corredor do trem com passageiros">
+            <p>Você reúne os passageiros no vagão restaurante. Todos estão nervosos. Entre eles estão:</p>
+            <ul>
+                <li>Um empresário que diz não conhecer a vítima.</li>
+                <li>Uma senhora idosa que estava dormindo na cabine ao lado.</li>
+                <li>Um jovem estudante que parece ansioso.</li>
+            </ul>
+            <button class="btn-proximo" data-proximo="5">Interrogar o empresário</button>
+            <button class="btn-proximo" data-proximo="6">Interrogar a senhora idosa</button>
+            <button class="btn-proximo" data-proximo="7">Interrogar o estudante</button>
+        </div>
+
+        <!-- Pegadas -->
+        <div class="passo" id="passo-3">
+            <img src="cenario-pegadas.jpg" alt="Pegadas de lama">
+            <p>As pegadas levam até o vagão de carga. Parece que o assassino tentou escapar, mas algo chama sua atenção: uma mancha de sangue na porta do vagão.</p>
+            <button class="btn-proximo" data-proximo="8">Investigar o vagão de carga</button>
+            <button class="btn-proximo" data-proximo="2">Voltar para interrogar os passageiros</button>
+        </div>
+
+        <!-- Relógio -->
+        <div class="passo" id="passo-4">
+            <img src="cenario-relogio.jpg" alt="Relógio quebrado">
+            <p>O relógio quebrado marcando 2:45 pode indicar o horário do assassinato. Você decide continuar investigando.</p>
+            <button class="btn-proximo" data-proximo="2">Ir interrogar os passageiros</button>
+        </div>
+
+        <!-- Interrogatórios -->
+        <div class="passo" id="passo-5">
+            <img src="cenario-empresario.jpg" alt="Empresário nervoso">
+            <p>O empresário está nervoso e diz que estava no vagão restaurante durante o grito. Porém, sua gravata tem uma mancha de lama, semelhante à das pegadas.</p>
+            <button class="btn-proximo" data-proximo="8">Confrontar o empresário com as pegadas</button>
+            <button class="btn-proximo" data-proximo="2">Voltar para interrogar os outros</button>
+        </div>
+
+        <div class="passo" id="passo-6">
+            <img src="cenario-senhora.jpg" alt="Senhora idosa">
+            <p>A senhora idosa afirma que ouviu passos no corredor às 2:30. Ela menciona que viu alguém com uma maleta indo em direção ao vagão de carga.</p>
+            <button class="btn-proximo" data-proximo="8">Investigar o vagão de carga</button>
+            <button class="btn-proximo" data-proximo="2">Voltar para interrogar os outros</button>
+        </div>
+
+        <div class="passo" id="passo-7">
+            <img src="cenario-estudante.jpg" alt="Estudante ansioso">
+            <p>O estudante parece ansioso e diz que estava ouvindo música com fones de ouvido. Ele menciona ter visto o empresário andando pelo corredor antes do grito.</p>
+            <button class="btn-proximo" data-proximo="5">Confrontar o empresário</button>
+            <button class="btn-proximo" data-proximo="2">Voltar para interrogar os outros</button>
+        </div>
+
+        <!-- Vagão de carga -->
+        <div class="passo" id="passo-8">
+            <img src="cenario-vagao.jpg" alt="Vagão de carga com uma maleta">
+            <p>No vagão de carga, você encontra uma maleta aberta com dinheiro e documentos da vítima. Há também uma faca similar à usada no crime.</p>
+            <button class="btn-proximo" data-proximo="9">Confrontar os passageiros com a evidência</button>
+        </div>
+
+        <!-- Final -->
+        <div class="passo" id="passo-9">
+            <img src="cenario-final.jpg" alt="Desfecho no vagão restaurante">
+            <p>Após reunir todas as evidências, você conclui que o empresário é o culpado. Ele confessou que matou a vítima para roubar os documentos e dinheiro. O mistério foi resolvido!</p>
+            <button class="btn-proximo" data-proximo="0">Recomeçar</button>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
